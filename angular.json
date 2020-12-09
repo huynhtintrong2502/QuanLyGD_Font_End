@@ -3,12 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "QuanLyGD": {
+    "QLGDVL": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "less"
-        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -20,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/QuanLyGD",
+            "outputPath": "dist/QLGDVL",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,15 +25,10 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              {
-                "glob": "**/*",
-                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
-                "output": "/assets/"
-              }
+              "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -73,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "QuanLyGD:build"
+            "browserTarget": "QLGDVL:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "QuanLyGD:build:production"
+              "browserTarget": "QLGDVL:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "QuanLyGD:build"
+            "browserTarget": "QLGDVL:build"
           }
         },
         "test": {
@@ -99,7 +91,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -121,19 +113,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "QuanLyGD:serve"
+            "devServerTarget": "QLGDVL:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "QuanLyGD:serve:production"
+              "devServerTarget": "QLGDVL:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "QuanLyGD",
+  "defaultProject": "QLGDVL",
   "cli": {
-    "analytics": "2c2f0db7-3ed4-491d-8277-13a2cb6d6179"
+    "analytics": "ccc1ed0f-b1fa-4ba8-b67b-b1080606a291"
   }
 }
