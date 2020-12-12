@@ -1,110 +1,199 @@
-<header id="header">
-  <div class="container d-flex align-items-center">
-
-    <div class="logo mr-auto">
-      <h1 class="text-light"><a href="index.html">Bocor<span>.</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-    </div>
-
-    <nav class="nav-menu d-none d-lg-block">
-      <ul>
-        <li class="active"><a [routerLink]="[ '/' ]">Home</a></li>
-        <li><a [routerLink]="[ '/admin' ]">Admin</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#team">Team</a></li>
-        <li class="drop-down"><a href="">Drop Down</a>
-          <ul>
-            <li><a href="#">Drop Down 1</a></li>
-            <li class="drop-down"><a href="#">Drop Down 2</a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
-            <li><a href="#">Drop Down 5</a></li>
-          </ul>
-        </li>
-        <li><a href="#contact">Contact Us</a></li>
-
-        <li class="get-started" ><a  class="btn big-login" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" >Get Started</a></li>
-      </ul>
-    </nav><!-- .nav-menu -->
+<header id="masthead-pro" class="sticky-header"><!-- Remove sticky-header class to remove sticky header -->
+  <div class="header-container">
     
-    <!-- Login-->
+    <h1><a href="home.html"><img src="./assets/images/logo.png" alt="Logo"></a></h1>
+    
+    <nav id="site-navigation-pro">
+      <ul class="sf-menu">
+        <li class="normal-item-pro current-menu-item">
+          <a href="home.html"><i class="fas fa-home"></i>TRANG CHỦ</a>
+        </li>
+        <li class="normal-item-pro">
+          <a href="tv-series.html"><i class="fas fa-tv"></i>PHIM</a>
+          <!-- Sub-Menu Example -->
+          <ul class="sub-menu">
+            <li class="normal-item-pro">
+              <a href="#!">Phim Đang Chiếu</a>
+            </li>
+            <li class="normal-item-pro">
+              <a href="#!">Phim Sắp Chiếu</a>
+            </li>
+          </ul> 
+          
+        </li>
+        <li class="normal-item-pro">
+          <a href="movies.html"><i class="fas fa-film"></i>LỊCH CHIẾU</a>
+        </li>
+        <li class="normal-item-pro">
+          <a href="podcasts.html"><i class="fas fa-podcast"></i>HỆ THỐNG RẠP</a>
+        </li>
+        <li class="normal-item-pro">
+          <a href="blog.html"><i class="fas fa-truck"></i>KHUYẾN MÃI | SỰ KIỆN</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <!--div id="header-btn-right">
+      <button class="btn btn-header-pro noselect" data-toggle="modal" data-target="#LoginModal" >Login</button>
+    </div-->
+      
+    <div id="mobile-bars-icon-pro" class="noselect"><i class="fas fa-bars"></i></div>
+    
+      
+    <div id="header-user-profile">
+      <div id="header-user-profile-click" class="noselect">
+        <img src="./assets/images/demo/user-profile.jpg" alt="Suzie">
+        <div id="header-username">Admin</div><i class="fas fa-angle-down"></i>
+      </div><!-- close #header-user-profile-click -->
+      <div id="header-user-profile-menu">
+        <ul>
+          <li><a href="profile.html"><i class="fa fa-user-circle"></i>Thông Tin Tài Khoản</a></li>
+          <li><a href="#!"><i class="fa fa-cogs"></i>Thay Đổi Thông Tin</a></li>
+          <li><a href="profile.html"><i class="fa fa-list-ul"></i>Lịch Sử Giao Dịch</a></li>
+          <li><a href="membership-plan.html"><i class="fa fa-credit-card"></i>Thẻ Thành Viên</a></li>
+          <li><a href="index.html"><i class="fa fa-power-off"></i>Đăng Xuất</a></li>
+        </ul>
+      </div><!-- close #header-user-profile-menu -->
+    </div><!-- close #header-user-profile -->
+    
+    <div id="progression-studios-header-search-icon" class="noselect">
+      <div class="progression-icon-search"></div>
+    </div>
+    
 
-    <div class="modal fade login" id="loginModal">
-      <div class="modal-dialog login animated">
-          <div class="modal-content">
-             <div class="modal-header" style="display: block;">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" >Login with</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="box">
-                         <div class="content">
-                            <div class="social">
-                                <a class="circle github" href="#">
-                                    <i class="fa fa-github fa-fw"></i>
-                                </a>
-                                <a id="google_login" class="circle google" href="#">
-                                    <i class="fa fa-google-plus fa-fw"></i>
-                                </a>
-                                <a id="facebook_login" class="circle facebook" href="#">
-                                    <i class="fa fa-facebook fa-fw"></i>
-                                </a>
-                            </div>
-                            <div class="division">
-                                <div class="line l"></div>
-                                  <span>or</span>
-                                <div class="line r"></div>
-                            </div>
-                            <div class="error"></div>
-                            <div class="form loginBox">
-                                <form method="" action="" accept-charset="UTF-8">
-                                <input id="email" class="form-control" type="text" placeholder="Email" name="email">
-                                <input id="password" class="form-control" type="password" placeholder="Password" name="password">
-                                <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
-                                </form>
-                            </div>
-                         </div>
-                    </div>
-                    <div class="box">
-                        <div class="content registerBox" style="display:none;">
-                         <div class="form">
-                            <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
-                            <input id="email" class="form-control" type="text" placeholder="Email" name="email">
-                            <input id="password" class="form-control" type="password" placeholder="Password" name="password">
-                            <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
-                            <input class="btn btn-default btn-register" type="button" value="Create account" name="commit">
-                            </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="forgot login-footer">
-                        <span>Looking to
-                             <a href="javascript: showRegisterForm();">create an account</a>
-                        ?</span>
-                    </div>
-                    <div class="forgot register-footer" style="display:none">
-                         <span>Already have an account?</span>
-                         <a href="javascript: showLoginForm();">Login</a>
-                    </div>
-                </div>
-          </div>
-      </div>
-  </div>
+    <div id="video-search-header">
+      <div class="container">
+        
+        <input type="text" placeholder="Tìm tên phim, diễn viên, đạo diễn" aria-label="Search" id="main-text-field">
+        
+        <div id="video-search-header-filtering">
+          <form id="video-search-header-filtering-padding">
+            <div class="row">
+              <div class="col-sm extra-padding">
+                <div class="dotted-dividers-pro">
+                  <h5>Kiểm duyệt:</h5>
+                  <ul class="video-search-type-list">
+                    <li>
+                      <label class="checkbox-pro-container">P
+                        <input type="radio" checked="checked" name="movies-rating">
+                        <span class="checkmark-pro"></span>
+                      </label>
+            
+                      <label class="checkbox-pro-container">C-13
+                        <input type="radio" name="movies-rating">
+                        <span class="checkmark-pro"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox-pro-container">C-16
+                        <input type="radio" name="movies-rating">
+                        <span class="checkmark-pro"></span>
+                      </label>
+            
+                      <label class="checkbox-pro-container">C-18
+                        <input type="radio" name="movies-rating"	>
+                        <span class="checkmark-pro"></span>
+                      </label>
+                    </li>
+                  </ul><div class="clearfix"></div>
 
-
-</div>
-
-</header><!-- End Header -->
-
+                </div><!-- close .dotted-dividers-pro -->
+              </div><!-- close .col -->
+              <div class="col-sm extra-padding">
+                <div class="dotted-dividers-pro">
+                <h5>Thể loại:</h5>
+                <select class="custom-select">
+                  <option selected>Chọn thể loại</option>
+                  <option value="1">Hành động</option>
+                  <option value="2">Phiêu lưu</option>
+                  <option value="3">Tâm lý</option>
+                  <option value="4">Hoạt hình</option>
+                  <option value="5">Hài hước</option>
+                  <option value="6">Gia đình</option>
+                  <option value="7">Kinh dị</option>
+                  <option value="8">Hồi hộp</option>
+                  <option value="9">Viễn tưởng</option>
+                </select>
+                </div><!-- close .dotted-dividers-pro -->
+              </div><!-- close .col -->
+              <div class="col-sm extra-padding">
+                <div class="dotted-dividers-pro">
+                <h5>Quốc gia:</h5>
+                <select class="custom-select">
+                  <option selected>Chọn Quốc gia</option>
+                  <option value="1">Việt Nam</option>
+                  <option value="2">Thái Lan</option>
+                  <option value="3">Trung Quốc</option>
+                  <option value="4">Mỹ</option>
+                  <option value="5">Hàn Quốc</option>
+                  <option value="6">Nhật Bản</option>
+                  <option value="7">Hồng Kông</option>
+                  <option value="8">Ấn Độ</option>
+                  <option value="9">Pháp</option>
+                  <option value="10">Đài Loan</option>
+                  <option value="11">Úc</option>
+                  <option value="12">Anh</option>
+                  <option value="13">Canada</option>
+                  <option value="14">Quốc gia khác</option>
+                </select>
+                </div><!-- close .dotted-dividers-pro -->
+              </div><!-- close .col -->
+              <div class="col-sm extra-padding extra-range-padding">
+                <h5>Bình chọn:</h5>
+                      <div class="range-padding-top"><input class="range-example-rating-input" type="text" min="0" max="10" value="4,10" step="1" /></div>
+                <!-- JS is under /js/script.js -->
+              </div><!-- close .col -->
+            </div><!-- close .row -->
+            <div id="video-search-header-buttons">
+              <a href="#!" class="btn">Tìm Kiếm</a>
+              <a href="#!" class="btn reset-btn">Hủy</a>
+            </div><!-- close #video-search-header-buttons -->
+          </form><!-- #video-search-header-filtering-padding -->
+        </div><!-- close #video-search-header-filtering -->
+        
+      </div><!-- close .container -->
+    </div><!-- close .video-search-header -->
+    
+    
+    
+    <div class="clearfix"></div>
+  </div><!-- close .header-container -->
+  
+  <nav id="mobile-navigation-pro">
+  
+    <ul id="mobile-menu-pro">
+      <li>
+        <a href="home.html"><i class="fas fa-home"></i>TRANG CHỦ</a>
+      </li>
+      <li>
+        <a href="tv-series.html"><i class="fas fa-tv"></i>PHIM</a>
+        <!-- Sub-Menu Example -->
+        <ul class="sub-menu">
+          <li>
+            <a href="#!">Phim Đang Chiếu</a>
+          </li>
+          <li>
+            <a href="#!">Phim Sắp Chiếu</a>
+          </li>
+        </ul> 
+      </li>
+      <li>
+        <a href="movies.html"><i class="fas fa-film"></i>LỊCH CHIẾU</a>
+      </li>
+      <li>
+        <a href="podcasts.html"><i class="fas fa-podcast"></i>HỆ THỐNG RẠP</a>
+      </li>
+      <li>
+        <a href="blog.html"><i class="fas fa-truck"></i>KHUYẾN MÃI | SỰ KIỆN</a>
+      </li>
+    
+    </ul>
+    <!--button class="btn btn-mobile-pro btn-header-pro noselect" data-toggle="modal" data-target="#LoginModal" >Login</button-->
+    
+    <div id="search-mobile-nav-pro">
+      <input type="text" placeholder="Tìm tên phim, diễn viên, đạo diễn" aria-label="Search">
+    </div>
+    
+  </nav>
+  <div id="progression-studios-header-shadow"></div>
+</header>
