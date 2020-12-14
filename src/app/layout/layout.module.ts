@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LayoutRoutingRoutes } from './layout-routing.routing';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import { FilmsComponent } from './films/films.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import { RouterModule } from '@angular/router';
     LayoutRoutingRoutes,
     RouterModule,
   ],
-  declarations: [LayoutComponent, HeaderComponent, FooterComponent, HomeComponent]
+  declarations: [LayoutComponent, HeaderComponent, FooterComponent, HomeComponent, FilmsComponent]
 })
 export class LayoutModule { }
