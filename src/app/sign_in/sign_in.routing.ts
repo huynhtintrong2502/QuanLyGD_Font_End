@@ -1,6 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
-import { SigninComponent } from './signin/signin.component';
 import { Sign_inComponent } from './sign_in.component';
+import { SigninComponent } from './signin/signin.component';
 
 const routes: Routes = [
   { 
@@ -15,4 +15,4 @@ const routes: Routes = [
    },
 ];
 
-export const MyRouteRoutes = RouterModule.forChild(routes);
+export const Sign_inRoutes = RouterModule.forChild(routes);
